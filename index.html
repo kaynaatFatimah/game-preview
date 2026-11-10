@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover">
+  <meta name="theme-color" content="#0b0710">
+  <title>Autopsy Glam: Post-Mortem MUA</title>
+  <link rel="preload" href="assets/fonts/fredoka.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="modulepreload" href="src/main.js">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/home.css">
+  <!-- PORTAL SDK: portal builds insert their SDK <script> here (see src/platform/portal.js). -->
+</head>
+<body>
+  <canvas id="scene"></canvas>
+  <div id="vignette"></div>
+  <div id="hud"></div>
+
+  <div id="splash">
+    <div class="splash-inner">
+      <div class="hero" aria-hidden="true">
+        <i class="hero-glow"></i>
+        <img class="hero-fangy" src="assets/art/characters/fangy/fangy-ivy-idle.webp" alt="" decoding="async">
+        <img class="hero-fangy alt" src="assets/art/characters/fangy/fangy-ivy-laugh.webp" alt="" decoding="async" fetchpriority="low" onload="this.parentNode.classList.add('laughs')">
+        <img class="hero-carnage" src="assets/art/characters/carnage/carnage-base.webp" alt="" decoding="async" fetchpriority="low">
+      </div>
+      <div class="menu">
+        <h1 class="title">Autopsy <span>Glam</span></h1>
+        <p class="subtitle">Post-Mortem MUA</p>
+        <div class="loadbar"><i></i></div>
+        <button id="play" class="btn-primary" hidden>Open the Morgue</button>
+        <div id="home-row" class="home-row" hidden>
+          <button id="cases" class="btn-ghost">Case files</button>
+          <button id="shelf" class="btn-ghost">Keepsakes</button>
+          <button id="gallery" class="btn-ghost">Inspirations</button>
+          <button id="options" class="btn-ghost">Options</button>
+        </div>
+      </div>
+      <div id="home-progress" class="home-progress" hidden></div>
+    </div>
+  </div>
+
+  <noscript>Autopsy Glam needs JavaScript and WebGL.</noscript>
+  <script type="module" src="src/main.js"></script>
+</body>
+</html>

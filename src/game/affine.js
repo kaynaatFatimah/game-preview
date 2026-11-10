@@ -1,0 +1,1 @@
+export function affine3(n,t){const[[e,f],[o,r],[c,i]]=n,u=e*(r-i)-f*(o-c)+(o*i-c*r),a=(n,t,a)=>[(n*(r-i)-f*(t-a)+(t*i-a*r))/u,(e*(t-a)-n*(o-c)+(o*a-c*t))/u,(e*(r*a-i*t)-f*(o*a-c*t)+n*(o*i-c*r))/u],[p,s,x]=a(t[0][0],t[1][0],t[2][0]),[b,d,g]=a(t[0][1],t[1][1],t[2][1]);return[p,b,s,d,x,g]}

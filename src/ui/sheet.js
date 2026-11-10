@@ -1,0 +1,1 @@
+export function closeSheet(e){e.classList.add("closing"),setTimeout(()=>e.remove(),200)}

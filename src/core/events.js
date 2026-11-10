@@ -1,0 +1,1 @@
+const e=new Map;export const events={on:(t,n)=>(e.has(t)||e.set(t,new Set),e.get(t).add(n),()=>e.get(t).delete(n)),emit(t,n){const o=e.get(t);if(o)for(const e of o)e(n)}};
